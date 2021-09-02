@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finakademiya</title>
+    <link rel="icon" href="img/favicon.svg">
+
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 50) {
+                    $('#toTop').fadeIn();
+                } else {
+                    $('#toTop').fadeOut();
+                }
+            });
+            $('#toTop').click(function () {
+                $('body,html').animate({
+                    scrollTop: 0
+                }, 500);
+                return false;
+            });
+
+        });
+    </script>
+    <!-- Кнопка "Вверх" -->
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="header__row">
+                    <a href='index.html' class="header__logo">Finakademiya</a>
+
+                    <div class="header__menu menu">
+                        <div class="menu__icon icon-menu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <nav class="menu__body">
+                            <ul class="menu__list">
+                                <li><a href="#" class="menu__link" text='menuLink1'></a></li>
+                                <li><a href="#" class="menu__link" text='menuLink2'></a></li>
+                                <li><a href="#" class="menu__link" text='menuLink3'></a></li>
+                                <li><a href="#" class="menu__link" text='menuLink4'></a></li>
+                                <li><a href="#" class="menu__link" text='menuLink5'></a></li>
+                                <li><a href="#" class="menu__link"><input id="lang" type='checkbox'
+                                            onclick="changeLagnuage()">
+                                        <label for="lang" class="eng">ENG</label>
+                                        <label for="lang" class="rus">RU</label>
+                                    </a>
+                                </li>
+                            </ul>
+
+                        </nav>
+                    </div>
+                    <!-- /.header__menu -->
+                </div>
+            </div>
+        </header>
+        <!-- /.header -->
+
+        <main class="page">
+            <div class="main-block">
+                <div class="main-block__slider">
+                    <div class="main-block__item_1"></div>
+                    <div class="main-block__item_2"></div>
+                </div>
+
+                <div class="container">
+                    <div class="main-block__text">
+                        <h1 class="main-block__title" text='mainName'></h1>
+                        <div class="main-block__description" text='mainDescription'></div>
+                        <div class="main-block__short-description" text='mainShortDescription'></div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.main-block -->
+
+            <div class="about-area">
+                <div class="about-area__mission about-area__block container">
+                    <div class="about-area__title main-title" text='aboutName1'></div>
+                    <div class="about-area__description" text='aboutDescription1'></div>
+                </div>
+
+                <div class="about-area__principles about-area__block">
+                    <div class="about-area__wrapper container">
+                        <div class="about-area__text">
+                            <div class="about-area__title main-title" text='aboutName2'></div>
+                            <div class="about-area__description">
+                                <ul>
+                                    <li class="about-area__item" text='aboutDescription2'></li>
+                                    <li class="about-area__item" text='aboutDescription3'></li>
+                                    <li class="about-area__item" text='aboutDescription4'></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="about-area__img">
+                            <img src="img/about/01.jpg" alt="Principles"></img>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-area__values about-area__block container">
+                    <div class="about-area__title main-title" text='aboutName3'></div>
+                    <div class="about-area__description" text='aboutDescription5'></div>
+                </div>
+
+                <div class="about-area__team about-area__block">
+                    <div class="about-area__wrapper container">
+                        <div class="about-area__img">
+                            <img src="img/about/02.jpg" alt="Team"></img>
+                        </div>
+                        <div class="about-area__text">
+                            <div class="about-area__title main-title" text='aboutName4'></div>
+                            <div class="about-area__description" text='aboutDescription6'></div>
+                            <a href="#" class="about-area__btn main-btn" text='aboutBtn'></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.about-area -->
+
+            <div class="partners">
+                <div class="container">
+                    <div class="partners__title main-title" text='partnersTitle'></div>
+                    <div class="partners__row">
+                        <div class="partners__block">
+                            <div class="partners__img"><img src="img/partners/freedom_finance.svg" alt="Freedom Finance"></div>
+                            <a href='#' class="partners__name" text='partnersName1'></a>
+                            <div class="partners__description" text='partnersDescription1'></div>
+                        </div>
+
+                        <div class="partners__block">
+                            <div class="partners__img"><img src="img/partners/alphabank.svg" alt="Alpha Bank"></div>
+                            <a href='#' class="partners__name" text='partnersName2'></a>
+                            <div class="partners__description" text='partnersDescription3'></div>
+                        </div>
+
+                        <div class="partners__block">
+                            <div class="partners__img"><img src="img/partners/severgazbank.svg" alt="Severgazbank"></div>
+                            <a href='#' class="partners__name" text='partnersName3'></a>
+                            <div class="partners__description" text='partnersDescription2'></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.partners -->
+
+            <div class="products">
+                <div class="container">
+                    <div class="products__title main-title" text='productsTitle'></div>
+                    <div class="products__row">
+                        <div class="products__block">
+                            <div class="products__img"><img src="img/products/01.svg" alt="IPO"></div>
+                            <div class="products__name" text='productsName1'></div>
+                            <div class="products__description" text='productsDescription1'></div>
+                            <a href="#" class="products__read" text='productsRead'></a>
+                        </div>
+
+                        <div class="products__block">
+                            <div class="products__img"><img src="img/products/02.svg" alt="Loan"></div>
+                            <div class="products__name" text='productsName2'></div>
+                            <div class="products__description" text='productsDescription2'></div>
+                            <a href="#" class="products__read" text='productsRead'></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.products -->
+
+            <div class="news">
+                <div class="container">
+                    <div class="news__title main-title" text='newsTitle'></div>
+                    <div class="news__row">
+
+                        <div class="news__block">
+                            <div class="news__img">
+                                <a href="" class="news__img_cover"></a>
+                                <img src="img/news/01.jpg" alt="">
+                            </div>
+                            <div class="news__text">
+                                <a href="#" class="news__name" text='newsName1'></a>
+                                <div class="news__description" text='newsDescription1'></div>
+                                <a href="#" class="news__read" text='newsRead'></a>
+                                <!-- <div class="news__from-partner">true</div> -->
+                            </div>
+                        </div>
+
+                        <div class="news__block">
+                            <div class="news__img">
+                                <a href="" class="news__img_cover"></a>
+                                <img src="img/news/02.jpg" alt="">
+                            </div>
+                            <div class="news__text">
+                                <a href="#" class="news__name" text='newsName3'></a>
+                                <div class="news__description" text='newsDescription2'></div>
+                                <a href="#" class="news__read" text='newsRead'></a>
+                                <!-- <div class="news__from-partner">false</div> -->
+                            </div>
+                        </div>
+
+                        <div class="news__block">
+                            <div class="news__img">
+                                <a href="" class="news__img_cover"></a>
+                                <img src="img/news/03.jpg" alt="">
+                            </div>
+                            <div class="news__text">
+                                <a href="#" class="news__name" text='newsName3'></a>
+                                <div class="news__description" text='newsDescription3'></div>
+                                <a href="#" class="news__read" text='newsRead'></a>
+                                <!-- <div class="news__from-partner">false</div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="news__btn main-btn" text='newsReadMore'></a>
+                </div>
+            </div>
+            <!-- /.news -->
+        </main>
+        <!-- /.page -->
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__row">
+                    <div class="social-media">
+                        <h3 class="footer__title" text='footerTitle1'></h3>
+                        <a href="https://www.facebook.com/" class="social-media__img">
+                            <img src="img/footer/01.svg" alt="Instagram"></a>
+                        <a href="https://www.instagram.com/" class="social-media__img">
+                            <img src="img/footer/02.svg" alt="Facebook"></a>
+                    </div>
+                    <div class="contact-data">
+                        <h3 class="footer__title" text='footerTitle2'></h3>
+                        <a href="tel:+74951282028" class="contact-data__phone">+74951282028</a>
+                        <a href='mailto:info@finakademiya.ru' class="contact-data__email">info@finakademiya.ru</a>
+                        <div class="contact-data__company" text='footerCompany'></div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- /.footer -->
+
+        <div id="toTop" class="backtotop"></div>
+    </div>
+    <!-- /.wrapper -->
+
+
+    <script src="js/slick.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/language.js"></script>
+    <script>
+        $('.main-block__slider').slick({
+            slidesToShow: 1,
+            autoplay: true,
+            autoplaySpeed: 4000,
+            adaptiveHeight: true,
+            fade: true,
+            arrows: false,
+        });
+    </script>
+</body>
+
+</html>

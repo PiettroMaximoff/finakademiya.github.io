@@ -1,0 +1,110 @@
+.main-block
+    padding: 200px 0 300px 0
+    position: relative
+    z-index: 1
+    @media (max-width: $md2)
+        padding: 150px 0 250px 0
+    @media (max-width: $md3)
+        padding: 100px 0 200px 0
+    @media (max-width: $md4)
+        padding: 50px 0 150px 0
+    &::before
+        content: ''
+        background: rgba(115, 112, 215, .6)
+        position: absolute
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%
+        z-index: -1
+
+    &__slider
+        top: 0
+        position: absolute
+        z-index: -2
+        width: 100%
+        height: 100%
+
+        .slick-slider
+            position: relative
+
+        .slick-list
+            overflow: hidden
+
+        .slick-track
+            position: absolute
+            height: 100%
+            width: 100%
+            display: flex
+
+        .slick-slide
+
+    &__item
+        width: 100%
+        height: 100%
+
+        &_1
+            background: url(../img/main-block/01.jpg) center no-repeat
+            background-size: cover
+            z-index: -2
+
+        &_2
+            background: url(../img/main-block/02.jpg) center no-repeat
+            background-size: cover
+            z-index: -2
+
+    &__text
+        @media (max-width: $md2)
+            padding: 0 25px
+            text-align: center
+            display: flex
+            flex-direction: column
+            align-items: center
+        @media (max-width: 390px)
+            padding: 0 15px
+
+    &__title
+        font-family: 'Playfair Display', serif
+        color: #fff
+        font-size: 70px
+        font-weight: 500
+        line-height: 1.28
+        letter-spacing: 2px
+        z-index: 2
+        margin-bottom: 40px
+        @media (max-width: $md3)
+            font-size: 60px
+        @media (max-width: $md4)
+            font-size: 50px
+        @media (max-width: 390px)
+            font-size: 40px
+
+    &__description
+        color: #fefefe
+        font-size: 26px
+        max-width: 750px
+        line-height: 1.5
+        letter-spacing: 0.5px
+        margin-bottom: 20px
+        z-index: 2
+        @media (max-width: $md3)
+            font-size: 22px
+        @media (max-width: $md4)
+            font-size: 20px
+        @media (max-width: 390px)
+            font-size: 18px
+
+    &__short-description
+        font-family: 'Playfair Display', serif
+        font-style: italic
+        color: #fefefe
+        font-size: 20px
+        max-width: 500px
+        text-decoration: underline
+        letter-spacing: 0.5px
+        line-height: 1.5
+        z-index: 2
+        @media (max-width: $md3)
+            font-size: 18px
+        @media (max-width: 390px)
+            font-size: 17px

@@ -1,0 +1,116 @@
+.about-area
+
+    &__mission
+        display: flex
+        flex-direction: column
+        align-items: center
+        text-align: center
+
+    &__principles
+        text-align: left
+        background: #f9faff
+
+    &__values
+        display: flex
+        flex-direction: column
+        align-items: center
+        text-align: center
+
+    &__team
+        background: #f9faff
+
+    &__block
+        padding: 80px 0 100px
+        @media (max-width: 1170px)
+            padding: 60px 0 80px
+        @media (max-width: $md2)
+            padding: 40px 10px 60px 10px
+        @media (max-width: $md3)
+            padding: 35px 10px 45px 10px
+        @media (max-width: $md4)
+            padding: 25px 0 35px
+
+    &__title
+        color: #4d4e54
+
+    &__description
+        color: #888
+        font-size: 22px
+        font-family: 'Poppins', sans-serif
+        line-height: 1.5
+        max-width: 780px
+        @media (max-width: 1170px)
+            font-size: 18px
+        @media (max-width: $md2)
+            max-width: 700px
+        @media (max-width: $md3)
+            padding: 0 15px
+        @media (max-width: $md4)
+            font-size: 18px
+        @media (max-width: 375px)
+            font-size: 16px
+            line-height: 1.3
+
+    &__wrapper
+        display: flex
+        justify-content: space-between
+        align-items: center
+        @media (max-width: $md3)
+            flex-direction: column
+            text-align: center
+
+    &__text
+        padding-left: 40px
+        max-width: 530px
+        @media (max-width: 1170px)
+            max-width: 440px
+        @media (max-width: $md2)
+            max-width: 400px
+        @media (max-width: $md3)
+            max-width: 700px
+            padding-left: 0
+
+    &__img
+        position: relative
+        z-index: 1
+        box-shadow: 0 10px 30px rgba(112, 137, 230, 0.2)
+        width: 535px
+        height: 410px
+        img
+            position: absolute
+            max-width: 100%
+            height: 100%
+            object-fit: cover
+        &::before
+            position: absolute
+            content: " "
+            top: 45px
+            left: -20px
+            border: 3px solid #ebecfb
+            width: 100%
+            height: 100%
+            z-index: 0
+            @media (max-width: $md2)
+                top: 30px
+                left: -15px
+        @media (max-width: 1170px)
+            width: 480px
+            height: 370px
+        @media (max-width: $md2)
+            width: 420px
+            height: 320px
+        @media (max-width: 820px)
+            width: 355px
+            height: 270px
+        @media (max-width: $md3)
+            display: none
+
+    &__item
+        list-style: inside
+        padding-left: 15px
+        @media (max-width: $md3)
+            list-style: none
+            padding-left: 0
+
+    &__btn
+        

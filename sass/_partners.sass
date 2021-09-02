@@ -1,0 +1,63 @@
+.partners
+    padding: 115px 0 80px
+    @media (max-width: $md3)
+        padding: 55px 0 40px
+
+    &__title
+        text-align: center
+        color: #44454f
+
+    &__row
+        margin-top: 15px
+        display: flex
+        justify-content: space-between
+        @media (max-width: $md3)
+            flex-direction: column
+            align-items: center
+
+    &__block
+        display: flex
+        flex: 0 1 33.333%
+        flex-direction: column
+        align-items: center
+        padding: 55px 15px 70px 15px
+        margin: 15px
+        box-shadow: 0 0 5px rgba(35, 37, 41, .1)
+        overflow-x: hidden
+        opacity: 1
+        @include anime(0.3s, 0s)
+        &:hover
+            box-shadow: 0 5px 20px rgba(112, 134, 230, .2)
+            opacity: 1
+        @media (max-width: $md3)
+            min-width: 300px
+        @media (max-width: $md4)
+            padding: 45px 10px 60px 10px
+
+    &__img
+        margin-bottom: 30px
+        width: 50px
+        height: 60px
+        position: relative
+        img
+            position: absolute
+            height: 100%
+            width: 100%
+            object-fit: contain
+
+    &__name
+        font-family: 'Playfair Display', serif
+        color: #44454f
+        font-size: 20px
+        font-weight: 300
+        text-align: center
+        margin-bottom: 20px
+
+    &__description
+        font-family: 'Poppins', sans-serif
+        color: #888
+        font-size: 16px
+        text-align: center
+        max-width: 306px
+        @media (max-width: $md4)
+            max-width: 260px

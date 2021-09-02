@@ -1,0 +1,112 @@
+.news
+    padding: 115px 0 85px
+    @media (max-width: $md3)
+        padding: 70px 10px 55px
+    @media (max-width: $md4)
+        padding: 50px 10px 35px
+
+    &__title
+        text-align: center
+        margin-bottom: 50px
+        @media (max-width: $md4)
+            margin-bottom: 30px
+
+    &__row
+        display: flex
+        justify-content: space-between
+        margin-bottom: 35px
+        @media (max-width: 1023px)
+            flex-wrap: wrap
+            justify-content: center
+        @media (max-width: $md3)
+            flex-wrap: nowrap
+            justify-content: space-between
+            flex-direction: column
+            align-items: center
+
+    &__block
+        display: flex
+        flex: 0 1 33.333%
+        flex-direction: column
+        margin: 10px 15px
+        max-height: 580px
+        max-width: 360px
+        box-shadow: 0 5px 30px 0px rgba(115, 112, 215, .2)
+        @media (max-width: 1280px)
+            max-height: 530px
+            max-width: 310px
+            margin: 10px 10px
+
+    &__img
+        position: relative
+        min-height: 370px
+        width: 360px
+        overflow: hidden
+        transform: scale(1)
+        @include anime(0.3s, 0s)
+        img
+            position: absolute
+            width: 100%
+            height: 100%
+            object-fit: cover
+        &:hover
+            transform: scaleY(1.04)
+        @media (max-width: 1280px)
+            min-height: 250px
+            max-width: 310px
+        @media (max-width: 390px)
+            min-height: 310px
+            width: 300px
+
+        &_cover
+            position: absolute
+            width: 0
+            height: 0
+            background: rgba(115, 112, 216, .75) url(../img/news/link.svg) center no-repeat
+            top: 50%
+            left: 50%
+            transform: translateX(-50%) translateY(-50%)
+            z-index: 3
+            opacity: 0
+            @include anime(0.3s, 0s)
+            &.active
+                opacity: 1
+                width: 100%
+                height: 100%
+
+    &__text
+        height: 100%
+        padding: 30px 25px 25px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+
+    &__name
+        color: #4d4e54
+        font-size: 16px
+        font-family: 'Playfair Display', serif
+        font-style: italic
+        font-weight: 600
+        line-height: 1.4
+        margin-bottom: 17px
+
+    &__description
+        font-family: 'Poppins', sans-serif
+        color: #888
+        font-size: 14px
+        line-height: 18px
+        margin-bottom: 20px
+
+    &__read
+        color: #7370d8
+        font-size: 14px
+        font-weight: 600
+        opacity: .8
+        @include anime(0.2s, 0s)
+        &:hover
+            opacity: 1
+
+    &__btn
+        margin: 0 auto
+        display: block
+        max-width: 190px

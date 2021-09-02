@@ -1,0 +1,148 @@
+*
+    box-sizing: border-box
+
+body
+    font-family: 'Lato', sans-serif
+
+$maxWidthContainer: 1170px
+$md1: $maxWidthContainer + 12px
+$md2: 991.98px
+$md3: 767.98px
+$md4: 479.98px
+
+@mixin anime($a, $b)
+    transition: all $a ease $b
+// @include anime(0.2s, 0s)
+
+/* --- footer прижат к низу --- */
+.wrapper
+    width: 100%
+    min-height: 100%
+    overflow: hidden
+    display: flex
+    flex-direction: column
+
+.container
+    max-width: $maxWidthContainer
+    margin: 0 auto
+    padding: 0 20px
+
+.page
+    flex: 1 1 auto
+
+/* --- Burger --- */
+.icon-menu
+    @media (max-width: $md3)
+        display: block
+        position: absolute
+        top: 30px
+        right: 15px
+        width: 30px
+        height: 18px
+        cursor: pointer
+        z-index: 5
+        @media (max-width: $md4)
+            top: 25px
+        span
+            @include anime(0.2s, 0s)
+            top: 8px
+            left: 0
+            position: absolute
+            width: 100%
+            height: 2px
+            background: #fff
+            opacity: .8
+            &:first-child
+                top: 0
+            &:last-child
+                top: auto
+                bottom: 0
+        &.active
+            span
+                opacity: 1
+                transform: scale(0)
+                &:first-child
+                    transform: rotate(-45deg)
+                    top: 8px
+                &:last-child
+                    transform: rotate(45deg)
+                    bottom: 8px
+
+.main-title
+    color: #44454f
+    font-size: 34px
+    font-family: 'Playfair Display', serif
+    font-weight: 700
+    margin-bottom: 32px
+    @media (max-width: 1170px)
+        font-size: 30px
+    @media (max-width: $md2)
+        font-size: 28px
+        margin-bottom: 26px
+    @media (max-width: $md4)
+        font-size: 24px
+    @media (max-width: 375px)
+        font-size: 22px
+
+.main-btn
+    display: inline-block
+    letter-spacing: 1.2px
+    background: #7370d8
+    border: 1px solid #7370d8
+    font-size: 16px
+    padding: 15px 20px
+    line-height: 20px
+    white-space: nowrap
+    text-align: center
+    color: #fff
+    text-transform: uppercase
+    margin-top: 35px
+    transition: 0.3s ease-in-out
+    &:hover
+        color: #7370d8
+        background: transparent
+    @media (max-width: $md2)
+        font-size: 14px
+        line-height: 16px
+        padding: 15px
+    @media (max-width: $md3)
+        margin-top: 25px
+    @media (max-width: 375px)
+        font-size: 12px
+
+.backtotop
+    position: fixed
+    z-index: 9999
+    bottom: 2%
+    right: 1%
+    background: #7370d8 url('../img/to-top.svg') center no-repeat
+    height: 50px
+    width: 50px
+    opacity: .6
+    padding: 5px 10px 0px 5px
+    border-radius: 15px
+    cursor: pointer
+    @include anime(0.3s, 0s)
+    @media (max-width: $md3)
+        visibility: hidden
+        opacity: 0
+    &:hover
+        opacity: 1
+
+#lang
+    display: none
+    &:checked ~ .eng,
+    &:not(:checked) ~ .rus
+        display: none
+
+label[for="lang"]
+    user-select: none
+    cursor: pointer
+
+@import 'header'
+@import 'main'
+@import 'about'
+@import 'partners'
+@import 'products'
+@import 'news'
+@import 'footer'
