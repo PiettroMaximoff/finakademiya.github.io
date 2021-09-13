@@ -4,7 +4,7 @@ $(document).ready(function () {
     $('.icon-menu').click(function (event) {
         $(this).toggleClass('active');
         $('.menu__body').toggleClass('active');
-        $('body').toggleClass('lock');
+        $('body').toggleClass('_lock');
     });
 
     let newsImg = document.querySelectorAll('.news__img');
