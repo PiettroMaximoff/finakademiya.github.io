@@ -9,7 +9,7 @@ $(document).ready(function () {
 
     let newsImg = document.querySelectorAll('.news__img');
     let newsCover = document.querySelectorAll('.news__img_cover');
-    for (let i = 0; newsImg.length; i++) {
+    for (let i = 0; newsImg.length > i; i++) {
         newsImg[i].addEventListener('mouseenter', function () {
             newsCover[i].classList.toggle('active');
         });
