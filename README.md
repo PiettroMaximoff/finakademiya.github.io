@@ -1,1 +1,1 @@
-# Finakademiya.github.io
+# finakademiya.github.io
